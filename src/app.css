@@ -1,0 +1,257 @@
+/* Custom Font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700;800;900&display=swap');
+
+/* Custom Css */
+@import './css/sidebar.css';
+@import './css/form.css';
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 10px; /* Specify the height here */
+}
+::-webkit-scrollbar-track {
+	background: #fff;
+}
+::-webkit-scrollbar-thumb {
+	background: rgb(79, 70, 229, 1);
+	border-radius: 5px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--tw-sidebar-width: 250px;
+	--tw-sidebar-bg: #fbfaff;
+}
+
+/* @import './css/general.css'; */
+.collapse {
+	display: block;
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+.collapse.show {
+	max-height: 99em;
+	transition: max-height 0.5s ease-in-out;
+}
+
+/* @import './css/general.css'; */
+
+/* @import './css/components.css'; */
+
+@layer components {
+	.nav-border .nav-item .active {
+		@apply border border-b-white rounded border-gray-300 rounded-b-none;
+	}
+
+	.bg-color-gradient {
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+	}
+}
+/* @import './css/components.css'; */
+
+.modalPDF {
+	@apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center;
+}
+
+.modal-contentPDF {
+	@apply bg-white p-6 rounded-lg max-w-6xl w-full h-4/5 overflow-hidden;
+}
+
+.close-btnPDF {
+	@apply mb-2 bg-red-500 text-white px-3 py-1 rounded cursor-pointer;
+}
+
+.iframe-container {
+	@apply w-full h-full;
+}
+.progress-bar-striped {
+	background-image: linear-gradient(
+		45deg,
+		rgba(255, 255, 255, 0.15) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.15) 50%,
+		rgba(255, 255, 255, 0.15) 75%,
+		transparent 75%,
+		transparent
+	);
+	background-size: 0.625rem;
+}
+
+.animate-strip {
+	animation: strip 2s infinite;
+}
+
+@keyframes strip {
+	from {
+		background-position: 50px 0;
+	}
+	to {
+		background-position: 0 0;
+	}
+}
+
+.placeholder-wave {
+	mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.801) 75%, #000 95%);
+	mask-size: 200% 100%;
+	animation: placeholder-wave 2s linear infinite;
+}
+
+@keyframes placeholder-wave {
+	100% {
+		mask-position: -200% 0%;
+	}
+}
+
+.animate-translate {
+	animation: animate-translate !important;
+	animation-duration: 0.8s !important;
+	animation-fill-mode: both !important;
+}
+
+@keyframes animate-translate {
+	100% {
+		transform: translateY(40px);
+		opacity: 100%;
+	}
+	0% {
+		transform: translateY(0);
+		opacity: 0%;
+	}
+}
+
+button:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+.border-error {
+	border-color: #ff0000 !important;
+	outline: #ff0000 !important;
+	box-shadow: #ff0000 !important;
+}
+
+.border-error:focus {
+	outline: none !important;
+	border-color: #ff0000 !important;
+	box-shadow: none !important;
+}
+
+.bg-bubbles li {
+	animation: square ease 20s infinite;
+	bottom: -50px;
+}
+
+.bg-bubbles li:nth-child(2) {
+	animation: square ease 17s infinite;
+	animation-delay: 2s;
+}
+
+.bg-bubbles li:nth-child(3) {
+	animation: square ease 20s infinite;
+	animation-delay: 4s;
+}
+
+.bg-bubbles li:nth-child(4) {
+	animation: square ease 22s infinite;
+}
+
+.bg-bubbles li:nth-child(6) {
+	animation: square ease 20s infinite;
+	animation-delay: 3s;
+}
+
+.bg-bubbles li:nth-child(7) {
+	animation: square ease 20s infinite;
+	animation-delay: 7s;
+}
+
+.bg-bubbles li:nth-child(8) {
+	animation: square ease 40s infinite;
+	animation-delay: 15s;
+}
+
+.bg-bubbles li:nth-child(9) {
+	animation: square ease 40s infinite;
+	animation-delay: 2s;
+}
+
+.bg-bubbles li:nth-child(10) {
+	animation: square ease 20s infinite;
+	animation-delay: 11s;
+}
+
+@keyframes square {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-1000px) rotate(600deg);
+	}
+}
+
+.swal2-title {
+	@apply text-22;
+}
+
+.form-range {
+	@apply bg-slate-50;
+}
+
+.card-h-100 {
+	height: calc(100% - 20px) !important;
+}
+
+.progress-bar-striped {
+	background-image: linear-gradient(
+		45deg,
+		rgba(255, 255, 255, 0.15) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.15) 50%,
+		rgba(255, 255, 255, 0.15) 75%,
+		transparent 75%,
+		transparent
+	);
+}
+
+select {
+	font-size: 14px !important;
+}
+.nav-tabs ul li a {
+	@apply dark:text-gray-100;
+}
+
+.nav-tabs.border-tab ul li .active {
+	@apply border border-b-0 rounded-md border-violet-300 rounded-b-none text-violet-300 dark:text-violet-300;
+}
+
+.nav-tabs.border-b-tabs ul li .active {
+	@apply border-violet-300 border-b-2 text-violet-300;
+}
+
+.nav-tabs.tab-pill ul li .active {
+	@apply bg-violet-300 text-white;
+}
+
+.nav-tabs.chart-tabpill ul li .active {
+	@apply bg-white text-violet-500 rounded dark:bg-zinc-800;
+}
+
+.nav-tabs.bar-tabs ul li .active {
+	@apply bg-violet-300 text-white;
+}
+.accordion-item .accordion-header {
+	@apply text-gray-200;
+}
+.accordion-item .accordion-header {
+	@apply text-gray-500;
+}
+.accordion-item .accordion-header.active {
+	@apply text-violet-500;
+}
