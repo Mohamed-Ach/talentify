@@ -698,10 +698,10 @@
 				<img class="w-6 h-6 rounded-full" src={user} alt="profile" />
 				<div class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
 					<div class="font-secondary pr-3 font-bold text-gray-900 dark:text-white">
-						Mohamed El 3etwani
+						Mohamed Etteouini
 					</div>
 					<div class="font-secondary pl-3 text-sm font-bold text-gray-500 dark:text-gray-400">
-						Manager at Myanmar
+						Manager at SYSTEM BASE
 					</div>
 				</div>
 			</figcaption>

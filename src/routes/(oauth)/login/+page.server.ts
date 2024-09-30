@@ -67,7 +67,7 @@ export const actions = {
 			})
 		} catch (err) {
 			console.log(err)
-			return fail(400, { error: 'Incorrect email or password. Please try again!' })
+			return fail(500, { error: 'Unable to contact the server, please try again!' })
 		}
 
 		throw redirect(302, redirectUrl ? '/' + redirectUrl.slice(1) : '/dashboard')

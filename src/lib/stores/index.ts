@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store'
 
-export const API_URL: string = 'http://localhost:8000/api'
+export const API_URL: string = 'http://127.0.0.1:8000/api'
 
 export const websiteName: string = 'Talentify'
 
